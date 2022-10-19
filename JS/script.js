@@ -1,24 +1,22 @@
 // Descrizione:
 // Visualizzare in pagina 5 numeri casuali. Da lì parte un timer di 30 secondi.
 
-const fiveRndNumbers = arrayRndNum(1, 5);
-console.log(fiveRndNumbers);
+// const fiveRndNumbers = arrayRndNum(1, 5);
+// console.log(fiveRndNumbers);
 
 let randomNumbers = [];
-
-function arrayRndNum(min, max) {    
+let userNumbers =
+function arrayRndNum(randomNumbers, max) {    
     while(randomNumbers.length < max ) {
-        for (let i = min; i < max; i++) {
-           const rndNum = randomNumber(1, 100); 
-            if(!randomNumbers.includes(rndNum)){
-                randomNumbers.push(rndNum);
-            }
-            i++;
-        }   
+        const rndNum = randomNumber(1, 100); 
+        if(!randomNumbers.includes(rndNum)){
+            randomNumbers.push(rndNum);
+        }
+        i++;   
     }
-    
+    return randomNumber;
 }
-
+console.log(randomNumbers)
 
 function randomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1))+ min;    
