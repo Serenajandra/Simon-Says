@@ -8,7 +8,7 @@ function arrayRndNum(min, max) {
     let randomNumbers = [];
     while(randomNumbers.length < max ) {
         for (let i = min; i < max; i++) {
-           const rndNum = Math.floor(Math.random() * (100 - 1 + 1))+ 1;  
+           const rndNum = randomNumber(1, 100); 
             if(!randomNumbers.includes(rndNum)){
                 randomNumbers.push(rndNum);
             }
