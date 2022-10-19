@@ -15,13 +15,14 @@ function arrayRndNum(min, max) {
             i++;
         }   
     }
+    
 }
 
 
-// function randomNumber(1, 100) {
-//     return Math.floor(Math.random() * (100 - 1 + 1))+ min;    
-// }
-// console.log(randomNumber())
+function randomNumber(1, 100) {
+    return Math.floor(Math.random() * (100 - 1 + 1))+ min;    
+}
+console.log(randomNumber())
 
 
 // Dopo 30 secondi i numeri spariscono e l'utente deve inserire, uno alla volta, i numeri che ha visto precedentemente, tramite il prompt().
