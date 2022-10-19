@@ -4,8 +4,9 @@
 const fiveRndNumbers = arrayRndNum(1, 5);
 console.log(fiveRndNumbers);
 
-function arrayRndNum(min, max) {
-    let randomNumbers = [];
+let randomNumbers = [];
+
+function arrayRndNum(min, max) {    
     while(randomNumbers.length < max ) {
         for (let i = min; i < max; i++) {
            const rndNum = randomNumber(1, 100); 
@@ -22,7 +23,7 @@ function arrayRndNum(min, max) {
 function randomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1))+ min;    
 }
-console.log(randomNumber())
+console.log(randomNumber(1, 100))
 
 
 // Dopo 30 secondi i numeri spariscono e l'utente deve inserire, uno alla volta, i numeri che ha visto precedentemente, tramite il prompt().
