@@ -44,25 +44,27 @@ function timeUntilPrompt(userNum){
   
   // FUNZIONE che confronta i due array di numeri
  
-  numberChecked(fiveRndNumbers, userNumbers)
-  function numberChecked(fiveRndNumbers, userNumbers) {
-    const result = []
-    for(let i = 0; i<fiveRndNumbers.length; i++){
-      thisNumber = userNumbers[i];
-      if (fiveRndNumbers.includes(thisNumber)) {
-        result.push(thisNumber);      
-      }
-    }
-    console.log(result.length, result)
-    return result;
-  }
+  const userResult = numberChecked(fiveRndNumbers, userNumbers)
   
-  // printResult(result);
-  // function printResult(result) {
-  //   document.getElementById("result").innerHTML = `Hai indovinato ${result.length} numeri: ${result}`;
-  // }
-
+  document.getElementById("result").innerHTML = `Hai indovinato ${parseInt(userResult.length)} numeri. Rispettivamente: ${userResult}`;
 }
+
+
+
+function numberChecked(fiveRndNumbers, userNumbers) {
+  const result = []
+  for(let i = 0; i<fiveRndNumbers.length; i++){
+    thisNumber = userNumbers[i];
+    if (fiveRndNumbers.includes(thisNumber)) {
+      result.push(thisNumber);      
+    }
+  }
+  console.log(result.length, result)
+  return result;
+}
+
+
+
 
 // FUNZIONE PER ARRAY DI randomNumbers
 function arrayRndNum(min, max) {    
